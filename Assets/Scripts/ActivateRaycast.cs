@@ -20,8 +20,8 @@ public class ActivateRaycast : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        leftHandController.SetActive(leftActivate.action.ReadValue<float>() > 0.1f);
-        rightHandController.SetActive(rightActivate.action.ReadValue<float>() > 0.1f);
+        leftHandController.SetActive(leftActivate.action.ReadValue<float>() > 1.1f);
+        rightHandController.SetActive(rightActivate.action.ReadValue<float>() > 1.1f);
     }
 }
 
