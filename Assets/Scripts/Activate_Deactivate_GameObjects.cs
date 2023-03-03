@@ -48,19 +48,23 @@ public class Activate_Deactivate_GameObjects : MonoBehaviour
 
     public void OnClickRoom1()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Room1");
     }
     public void OnClickRoom2()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Room2");
     }
     public void OnClickRoom3()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        SceneManager.LoadScene("Room3");
     }
     public void OnClickRoom4()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+       // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
+        SceneManager.LoadScene("Room4");
     }
 
     public void OnTriggerEnter(Collider other)
