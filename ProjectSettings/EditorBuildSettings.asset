@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 59354cb4182a17349984bd236b5fca41
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Scene Mourat.unity
+    guid: 12c46ea5d32bf8d4c801b6f21f787d1c
+  - enabled: 1
+    path: Assets/Scenes/Scene Boualem.unity
+    guid: 6081a335e907cb54c9fef141fc6c5f61
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6cb031ef69afe714e9f6f8c295ae8970,
       type: 2}

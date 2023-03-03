@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.Events;
+//using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class Activate_Deactivate_GameObjects : MonoBehaviour
 {
     public GameObject GameObjectToDeactivate;
+  //  public GameObject panelToDeactivate;
+    public GameObject panelRoomToDeactivate;
     //public UnityEvent unityEvent;
     //public MouseControl _mouseControl;
     bool stateVRS = false;
@@ -14,15 +17,10 @@ public class Activate_Deactivate_GameObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //if (_mouseControl._leftMouseClick)
-        //{
-        //    Debug.Log("Left Mouse Cliked");
-        //    GameObjectToDeactivate.SetActive(true);
-        //}
-        //if (!_mouseControl._leftMouseClick)
-        //{
-        //    GameObjectToDeactivate.SetActive(false);
-        //}
+        GameObjectToDeactivate.SetActive(false);
+     
+        panelRoomToDeactivate.SetActive(false);
+       
     }
 
     public void OnClickVRSetting()
@@ -30,10 +28,39 @@ public class Activate_Deactivate_GameObjects : MonoBehaviour
         stateVRS = !stateVRS;
         GameObjectToDeactivate.SetActive(stateVRS);
     }
-        public void SwitchActivation()
+
+    public void OnClickChooseRoom()
     {
-        state = !state;
-        GameObjectToDeactivate.SetActive(state);
+        stateVRS = !stateVRS;
+        panelRoomToDeactivate.SetActive(true);
+        GameObjectToDeactivate.SetActive(stateVRS);
+        
+    }
+
+    public void OnClickBack()
+    {
+        
+        panelRoomToDeactivate.SetActive(false);
+        stateVRS = true;
+        GameObjectToDeactivate.SetActive(stateVRS);
+        
+    }
+
+    public void OnClickRoom1()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+    public void OnClickRoom2()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void OnClickRoom3()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+    public void OnClickRoom4()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4);
     }
 
     public void OnTriggerEnter(Collider other)
@@ -48,15 +75,7 @@ public class Activate_Deactivate_GameObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if (_mouseControl._leftMouseClick)
-        {
-            //Debug.Log("(Activate_Deactivate_GameObjects.cs) Left Mouse Cliked");
-            //GameObjectToDeactivate.SetActive(true);
-        }
-        //if (!_mouseControl._leftMouseClick)
-        {
-            //GameObjectToDeactivate.SetActive(false);
-        }
+        
 
     }
 }
